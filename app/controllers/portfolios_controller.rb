@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+  layout 'portfolio' #สีัตรง stylesheets
     def index
         @portfolio_items = Portfolio.all
     end
