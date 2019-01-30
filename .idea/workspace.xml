@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e80fcd6d-3f76-49d5-b794-5e74818f880b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-    </list>
+    <list default="true" id="e80fcd6d-3f76-49d5-b794-5e74818f880b" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/log/" />
@@ -145,8 +143,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-231" />
-    <option name="y" value="156" />
+    <option name="x" value="318" />
+    <option name="y" value="75" />
     <option name="width" value="816" />
     <option name="height" value="645" />
   </component>
@@ -573,12 +571,12 @@
       <workItem from="1548684451539" duration="760000" />
       <workItem from="1548685661751" duration="1987000" />
       <workItem from="1548728006469" duration="13709000" />
-      <workItem from="1548814570876" duration="9430000" />
+      <workItem from="1548814570876" duration="9598000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55874000" />
+    <option name="totallyTimeSpent" value="56042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-231" y="156" width="816" height="645" extended-state="0" />
