@@ -2911,3 +2911,442 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 870ms (Views: 702.9ms | ActiveRecord: 140.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:03:49 +0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (46.8ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 479ms (Views: 447.8ms | ActiveRecord: 20.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-07 14:03:51 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vwlKNmFZ/XGDoa/lSGz7FiYskh/FzweSXKF3361+JH8TuHQ/MC1hW8WjfmdqYoS4ED5/FfBB3qYSaZWUMSGtWw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 14ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:03:51 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (17.3ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 76ms (Views: 73.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-02-07 14:03:53 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (17.4ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 71ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-02-07 14:03:57 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HkhZCTVAXuS82mpIpK96bAvOEfYam7sE1UKZ8Y11OgDTP629lzyhcd2+aJeNZgGffxxUd4XIQsXpQCoTastWlA==", "user"=>{"email"=>"test2@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test2@test.com"], ["LIMIT", 1]]
+  ↳ /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 137ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:03:57 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (7.3ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:21:09 +0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+  Rendered shared/_nav.html.erb (0.9ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+Completed 500 Internal Server Error in 1644ms (ActiveRecord: 9.8ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationHelper::DevcampViewTool):
+    23: 
+    24: <%= yield %>
+    25: 
+    26: <%= copyright_generator %>
+    27: 
+    28: <%= source_helper("application") %>
+    29: </body>
+  
+app/helpers/application_helper.rb:20:in `copyright_generator'
+app/views/layouts/application.html.erb:26:in `_app_views_layouts_application_html_erb__3380496872958721613_70285720354380'
+Started POST "/__web_console/repl_sessions/5246cacc349ad7cb3a8314a5209dec7a/trace" for 127.0.0.1 at 2019-02-07 14:22:46 +0700
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:25:19 +0700
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered shared/_nav.html.erb (1.2ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+Completed 500 Internal Server Error in 548ms (ActiveRecord: 27.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationHelper::DevcampViewTool):
+    23: 
+    24: <%= yield %>
+    25: 
+    26: <%= copyright_generator %>
+    27: 
+    28: <%= source_helper("application") %>
+    29: </body>
+  
+app/helpers/application_helper.rb:20:in `copyright_generator'
+app/views/layouts/application.html.erb:26:in `_app_views_layouts_application_html_erb___2929129175226721039_70346928205740'
+Started POST "/__web_console/repl_sessions/05377f3292173b0c521cb990f2f22462/trace" for 127.0.0.1 at 2019-02-07 14:25:23 +0700
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:31:59 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered shared/_nav.html.erb (1.3ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 7.7ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationHelper::DevcampViewTool):
+    23: 
+    24: <%= yield %>
+    25: 
+    26: <%= copyright_generator %>
+    27: 
+    28: <%= source_helper("application") %>
+    29: </body>
+  
+app/helpers/application_helper.rb:20:in `copyright_generator'
+app/views/layouts/application.html.erb:26:in `_app_views_layouts_application_html_erb___2929129175226721039_70346932500780'
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:32:20 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 10.5ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationHelper::DevcampViewTool):
+    23: 
+    24: <%= yield %>
+    25: 
+    26: <%= copyright_generator %>
+    27: 
+    28: <%= source_helper("application") %>
+    29: </body>
+  
+app/helpers/application_helper.rb:20:in `copyright_generator'
+app/views/layouts/application.html.erb:26:in `_app_views_layouts_application_html_erb___2929129175226721039_70346981349320'
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:32:28 +0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.9ms)
+  Rendered shared/_nav.html.erb (1.1ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+Completed 500 Internal Server Error in 602ms (ActiveRecord: 24.1ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationHelper::DevcampViewTool):
+    23: 
+    24: <%= yield %>
+    25: 
+    26: <%= copyright_generator %>
+    27: 
+    28: <%= source_helper("application") %>
+    29: </body>
+  
+app/helpers/application_helper.rb:20:in `copyright_generator'
+app/views/layouts/application.html.erb:26:in `_app_views_layouts_application_html_erb___1320121355892476547_70221692324500'
+Started POST "/__web_console/repl_sessions/054f75f6fa4074188d1e18efc889eec3/trace" for 127.0.0.1 at 2019-02-07 14:32:56 +0700
+Started POST "/__web_console/repl_sessions/054f75f6fa4074188d1e18efc889eec3/trace" for 127.0.0.1 at 2019-02-07 14:32:57 +0700
+Started POST "/__web_console/repl_sessions/054f75f6fa4074188d1e18efc889eec3/trace" for 127.0.0.1 at 2019-02-07 14:32:58 +0700
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:44:16 +0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+  Rendered shared/_nav.html.erb (1.3ms)
+Completed 500 Internal Server Error in 621ms (ActiveRecord: 19.8ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationHelper::DevcampViewTool):
+    23: 
+    24:         <%= yield %>
+    25: 
+    26:         <%= copyright_generator %>
+    27: 
+    28:         <%= source_helper("application") %>
+    29: </body>
+  
+app/helpers/application_helper.rb:20:in `copyright_generator'
+app/views/layouts/application.html.erb:26:in `_app_views_layouts_application_html_erb__3890805925677482900_70292327860880'
+Started POST "/__web_console/repl_sessions/bee3bb1c97282d35b9971fb17906723e/trace" for 127.0.0.1 at 2019-02-07 14:44:41 +0700
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:50:32 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+  Rendered shared/_application_nav.html.erb (1.1ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationHelper::DevcampViewTool):
+    24: 
+    25:       <%= yield %>
+    26: 
+    27:       <%= copyright_generator %>
+    28: 
+    29:       <%= source_helper("application") %>
+    30: 
+  
+app/helpers/application_helper.rb:20:in `copyright_generator'
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb__3890805925677482900_70292340444080'
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:51:40 +0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  Rendered shared/_application_nav.html.erb (1.3ms)
+Completed 500 Internal Server Error in 556ms (ActiveRecord: 11.9ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationHelper::DevcampViewTool):
+    24: 
+    25:       <%= yield %>
+    26: 
+    27:       <%= copyright_generator %>
+    28: 
+    29:       <%= source_helper("application") %>
+    30: 
+  
+app/helpers/application_helper.rb:20:in `copyright_generator'
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb__4230803858427101829_70251484512960'
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:51:42 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+  Rendered shared/_application_nav.html.erb (0.6ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationHelper::DevcampViewTool):
+    24: 
+    25:       <%= yield %>
+    26: 
+    27:       <%= copyright_generator %>
+    28: 
+    29:       <%= source_helper("application") %>
+    30: 
+  
+app/helpers/application_helper.rb:20:in `copyright_generator'
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb__4230803858427101829_70251438535960'
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:51:43 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered shared/_application_nav.html.erb (1.3ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationHelper::DevcampViewTool):
+    24: 
+    25:       <%= yield %>
+    26: 
+    27:       <%= copyright_generator %>
+    28: 
+    29:       <%= source_helper("application") %>
+    30: 
+  
+app/helpers/application_helper.rb:20:in `copyright_generator'
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb__4230803858427101829_70251484301880'
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:51:43 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered shared/_application_nav.html.erb (0.7ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationHelper::DevcampViewTool):
+    24: 
+    25:       <%= yield %>
+    26: 
+    27:       <%= copyright_generator %>
+    28: 
+    29:       <%= source_helper("application") %>
+    30: 
+  
+app/helpers/application_helper.rb:20:in `copyright_generator'
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb__4230803858427101829_70251486925280'
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:51:44 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered shared/_application_nav.html.erb (0.6ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationHelper::DevcampViewTool):
+    24: 
+    25:       <%= yield %>
+    26: 
+    27:       <%= copyright_generator %>
+    28: 
+    29:       <%= source_helper("application") %>
+    30: 
+  
+app/helpers/application_helper.rb:20:in `copyright_generator'
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb__4230803858427101829_70251495330640'
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:51:49 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered shared/_application_nav.html.erb (0.7ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationHelper::DevcampViewTool):
+    24: 
+    25:       <%= yield %>
+    26: 
+    27:       <%= copyright_generator %>
+    28: 
+    29:       <%= source_helper("application") %>
+    30: 
+  
+app/helpers/application_helper.rb:20:in `copyright_generator'
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb__4230803858427101829_70251487740380'
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:51:51 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered shared/_application_nav.html.erb (0.8ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationHelper::DevcampViewTool):
+    24: 
+    25:       <%= yield %>
+    26: 
+    27:       <%= copyright_generator %>
+    28: 
+    29:       <%= source_helper("application") %>
+    30: 
+  
+app/helpers/application_helper.rb:20:in `copyright_generator'
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb__4230803858427101829_70251451764800'
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:51:52 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+  Rendered shared/_application_nav.html.erb (0.6ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationHelper::DevcampViewTool):
+    24: 
+    25:       <%= yield %>
+    26: 
+    27:       <%= copyright_generator %>
+    28: 
+    29:       <%= source_helper("application") %>
+    30: 
+  
+app/helpers/application_helper.rb:20:in `copyright_generator'
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb__4230803858427101829_70251438351780'
+Started POST "/__web_console/repl_sessions/34cec092b14c0cda4859078a253c6f22/trace" for 127.0.0.1 at 2019-02-07 14:51:57 +0700
+Started POST "/__web_console/repl_sessions/34cec092b14c0cda4859078a253c6f22/trace" for 127.0.0.1 at 2019-02-07 14:51:57 +0700
+Started POST "/__web_console/repl_sessions/34cec092b14c0cda4859078a253c6f22/trace" for 127.0.0.1 at 2019-02-07 14:52:54 +0700
+Started POST "/__web_console/repl_sessions/34cec092b14c0cda4859078a253c6f22/trace" for 127.0.0.1 at 2019-02-07 14:52:59 +0700
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:53:28 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+Completed 200 OK in 48ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-02-07 14:53:56 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.7ms)
+  Rendered shared/_application_nav.html.erb (0.5ms)
+Completed 200 OK in 55ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-02-07 14:53:59 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4M6krGiQ+K1hwhGiMTQn3uvgLbCtHfNgrtqPBmmUuluwil9Qvcly4FlRiEgxiLuXxdWZ87WdoxQjIT78pns+wg==", "user"=>{"email"=>"test2@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test2@test.com"], ["LIMIT", 1]]
+  ↳ /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 145ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 14:54:00 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+  Rendered shared/_application_nav.html.erb (0.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.8ms)
+
+
