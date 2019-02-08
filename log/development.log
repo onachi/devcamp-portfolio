@@ -4353,3 +4353,74 @@ Processing by PagesController#contact as HTML
 Completed 200 OK in 112ms (Views: 110.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-02-08 09:21:09 +0700
+  [1m[35m (36.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (3.1ms)
+  Rendered shared/_application_nav.html.erb (83.8ms)
+Completed 200 OK in 1797ms (Views: 1703.8ms | ActiveRecord: 57.2ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2019-02-08 09:21:14 +0700
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (47.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:84
+  Rendered collection of blogs/_blog.html.erb [10 times] (22.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (93.4ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 157ms (Views: 91.3ms | ActiveRecord: 57.9ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2019-02-08 09:21:14 +0700
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:84
+  Rendered collection of blogs/_blog.html.erb [10 times] (30.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (33.1ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 73ms (Views: 70.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2019-02-08 09:21:21 +0700
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:84
+  Rendered collection of blogs/_blog.html.erb [10 times] (18.3ms)
+  Rendered blogs/index.html.erb within layouts/blog (22.5ms)
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 68ms (Views: 65.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2019-02-08 09:37:20 +0700
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:84
+  Rendered collection of blogs/_blog.html.erb [10 times] (10.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (20.5ms)
+  Rendered shared/_blog_nav.html.erb (1.2ms)
+  Rendered shared/_nav.html.erb (1.1ms)
+Completed 200 OK in 107ms (Views: 97.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 09:37:24 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  Rendered shared/_application_nav.html.erb (1.3ms)
+Completed 200 OK in 83ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 09:37:24 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered shared/_application_nav.html.erb (0.9ms)
+Completed 200 OK in 91ms (Views: 88.6ms | ActiveRecord: 0.0ms)
+
+
