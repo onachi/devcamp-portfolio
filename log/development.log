@@ -7016,3 +7016,232 @@ Processing by PortfoliosController#show as HTML
 Completed 200 OK in 89ms (Views: 39.9ms | ActiveRecord: 41.6ms)
 
 
+Started GET "/blogs" for 127.0.0.1 at 2019-02-11 10:57:18 +0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:3
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:4
+  Rendered collection of blogs/_blog.html.erb [5 times] (6.3ms)
+  Rendered blogs/index.html.erb within layouts/blog (48.4ms)
+  Rendered shared/_blog_nav.html.erb (2.3ms)
+  Rendered shared/_blog_masthead.html.erb (0.6ms)
+  Rendered shared/_blog_sidebar.html.erb (0.7ms)
+  Rendered shared/_blog_footer.html.erb (0.4ms)
+Completed 200 OK in 581ms (Views: 538.0ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2019-02-11 10:57:19 +0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:3
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:4
+  Rendered collection of blogs/_blog.html.erb [5 times] (4.6ms)
+  Rendered blogs/index.html.erb within layouts/blog (28.3ms)
+  Rendered shared/_blog_nav.html.erb (1.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.7ms)
+  Rendered shared/_blog_sidebar.html.erb (1.0ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 121ms (Views: 110.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2019-02-11 11:00:29 +0700
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (1.1ms)
+  Rendered portfolios/index.html.erb within layouts/portfolio (17.4ms)
+  Rendered shared/_portfolio_nav.html.erb (1.2ms)
+  Rendered shared/_portfolio_footer.html.erb (0.4ms)
+Completed 200 OK in 70ms (Views: 52.8ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2019-02-11 11:00:29 +0700
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (3.4ms)
+  Rendered portfolios/index.html.erb within layouts/portfolio (7.6ms)
+  Rendered shared/_portfolio_nav.html.erb (1.3ms)
+  Rendered shared/_portfolio_footer.html.erb (0.7ms)
+Completed 200 OK in 79ms (Views: 73.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-11 11:18:25 +0700
+  
+SyntaxError (/Users/onachi/DevcampPortfolio/app/helpers/application_helper.rb:60: syntax error, unexpected end-of-input, expecting end):
+  
+app/helpers/application_helper.rb:60: syntax error, unexpected end-of-input, expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/pages_controller.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2019-02-11 11:18:39 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendered shared/_application_nav.html.erb (24.8ms)
+Completed 200 OK in 1162ms (Views: 1145.0ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/about-me" for 127.0.0.1 at 2019-02-11 11:33:08 +0700
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (12.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendered shared/_application_nav.html.erb (21.7ms)
+Completed 200 OK in 99ms (Views: 78.8ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2019-02-11 11:33:09 +0700
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (22.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendered shared/_application_nav.html.erb (2.0ms)
+Completed 200 OK in 118ms (Views: 113.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2019-02-11 11:33:10 +0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:3
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:4
+  Rendered collection of blogs/_blog.html.erb [5 times] (6.2ms)
+  Rendered blogs/index.html.erb within layouts/blog (51.6ms)
+  Rendered shared/_blog_nav.html.erb (1.4ms)
+  Rendered shared/_blog_masthead.html.erb (1.3ms)
+  Rendered shared/_blog_sidebar.html.erb (0.7ms)
+  Rendered shared/_blog_footer.html.erb (0.4ms)
+Completed 200 OK in 128ms (Views: 99.0ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2019-02-11 11:33:11 +0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:3
+  [1m[36mBlog Load (3.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:4
+  Rendered collection of blogs/_blog.html.erb [5 times] (6.4ms)
+  Rendered blogs/index.html.erb within layouts/blog (24.2ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.4ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.3ms)
+Completed 200 OK in 103ms (Views: 91.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2019-02-11 11:33:12 +0700
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendered shared/_application_nav.html.erb (3.7ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2019-02-11 11:33:12 +0700
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendered shared/_application_nav.html.erb (4.0ms)
+Completed 200 OK in 68ms (Views: 64.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2019-02-11 11:33:13 +0700
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (1.1ms)
+  Rendered portfolios/index.html.erb within layouts/portfolio (16.1ms)
+  Rendered shared/_portfolio_nav.html.erb (1.0ms)
+  Rendered shared/_portfolio_footer.html.erb (0.4ms)
+Completed 200 OK in 69ms (Views: 53.0ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2019-02-11 11:33:13 +0700
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (2.1ms)
+  Rendered portfolios/index.html.erb within layouts/portfolio (6.5ms)
+  Rendered shared/_portfolio_nav.html.erb (0.5ms)
+  Rendered shared/_portfolio_footer.html.erb (0.4ms)
+Completed 200 OK in 80ms (Views: 76.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2019-02-11 11:33:46 +0700
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (3.6ms)
+  Rendered portfolios/index.html.erb within layouts/portfolio (6.1ms)
+  Rendered shared/_portfolio_nav.html.erb (0.5ms)
+  Rendered shared/_portfolio_footer.html.erb (0.6ms)
+Completed 200 OK in 52ms (Views: 47.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2019-02-11 11:34:05 +0700
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (1.6ms)
+  Rendered portfolios/index.html.erb within layouts/portfolio (4.0ms)
+  Rendered shared/_portfolio_nav.html.erb (0.6ms)
+  Rendered shared/_portfolio_footer.html.erb (0.3ms)
+Completed 200 OK in 70ms (Views: 66.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2019-02-11 11:35:03 +0700
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (1.9ms)
+  Rendered portfolios/index.html.erb within layouts/portfolio (5.5ms)
+  Rendered shared/_portfolio_nav.html.erb (0.6ms)
+  Rendered shared/_portfolio_footer.html.erb (0.5ms)
+Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 1.0ms)
+
+
