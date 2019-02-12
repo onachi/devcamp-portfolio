@@ -7963,3 +7963,117 @@ Migrating to AddPositionToPortfolios (20190212023938)
   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[36mPortfolio Update (0.6ms)[0m  [1m[33mUPDATE "portfolios" SET "position" = $1, "updated_at" = $2 WHERE "portfolios"."id" = $3[0m  [["position", 2], ["updated_at", "2019-02-12 02:46:08.086090"], ["id", 9]]
   [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2019-02-12 11:41:55 +0700
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 3411ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'html.sortable' with type 'application/javascript'
+Checked in these paths: 
+  /Users/onachi/DevcampPortfolio/app/assets/config
+  /Users/onachi/DevcampPortfolio/app/assets/images
+  /Users/onachi/DevcampPortfolio/app/assets/javascripts
+  /Users/onachi/DevcampPortfolio/app/assets/stylesheets
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/jquery-ui-rails-6.0.1/app/assets/images
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/jquery-ui-rails-6.0.1/app/assets/javascripts
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/jquery-ui-rails-6.0.1/app/assets/stylesheets
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/font-awesome-rails-4.7.0.4/app/assets/fonts
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/font-awesome-rails-4.7.0.4/app/assets/stylesheets
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activestorage-5.2.2/app/assets/javascripts
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/actioncable-5.2.2/lib/assets/compiled
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/actionview-5.2.2/lib/assets/compiled
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/onachi/DevcampPortfolio/node_modules
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/popper_js-1.14.5/assets/javascripts
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/bootstrap-4.2.1/assets/stylesheets
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/bootstrap-4.2.1/assets/javascripts):
+     9: 
+    10:   <meta name="keywords" content="<%= @seo_keywords %>" />
+    11: 
+    12:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    13:   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    14: </head>
+    15: 
+  
+app/assets/javascripts/application.js:17
+app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__1147743440249926686_70098524227700'
+Started GET "/" for 127.0.0.1 at 2019-02-12 11:41:59 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'html.sortable' with type 'application/javascript'
+Checked in these paths: 
+  /Users/onachi/DevcampPortfolio/app/assets/config
+  /Users/onachi/DevcampPortfolio/app/assets/images
+  /Users/onachi/DevcampPortfolio/app/assets/javascripts
+  /Users/onachi/DevcampPortfolio/app/assets/stylesheets
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/jquery-ui-rails-6.0.1/app/assets/images
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/jquery-ui-rails-6.0.1/app/assets/javascripts
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/jquery-ui-rails-6.0.1/app/assets/stylesheets
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/font-awesome-rails-4.7.0.4/app/assets/fonts
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/font-awesome-rails-4.7.0.4/app/assets/stylesheets
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activestorage-5.2.2/app/assets/javascripts
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/actioncable-5.2.2/lib/assets/compiled
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/actionview-5.2.2/lib/assets/compiled
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/onachi/DevcampPortfolio/node_modules
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/popper_js-1.14.5/assets/javascripts
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/bootstrap-4.2.1/assets/stylesheets
+  /Users/onachi/.rvm/gems/ruby-2.6.0/gems/bootstrap-4.2.1/assets/javascripts):
+     9: 
+    10:   <meta name="keywords" content="<%= @seo_keywords %>" />
+    11: 
+    12:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    13:   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    14: </head>
+    15: 
+  
+app/assets/javascripts/application.js:17
+app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__1147743440249926686_70098567273860'
+Started GET "/" for 127.0.0.1 at 2019-02-12 11:42:58 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered shared/_application_nav.html.erb (77.8ms)
+Completed 200 OK in 1211ms (Views: 1153.9ms | ActiveRecord: 55.7ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2019-02-12 11:43:02 +0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (42.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (1.4ms)
+  Rendered portfolios/index.html.erb within layouts/portfolio (69.1ms)
+  Rendered shared/_portfolio_nav.html.erb (0.9ms)
+  Rendered shared/_portfolio_masthead.html.erb (0.5ms)
+  Rendered shared/_portfolio_footer.html.erb (0.4ms)
+Completed 200 OK in 251ms (Views: 185.9ms | ActiveRecord: 53.3ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2019-02-12 11:43:02 +0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (1.0ms)
+  Rendered portfolios/index.html.erb within layouts/portfolio (3.3ms)
+  Rendered shared/_portfolio_nav.html.erb (1.0ms)
+  Rendered shared/_portfolio_masthead.html.erb (0.5ms)
+  Rendered shared/_portfolio_footer.html.erb (0.3ms)
+Completed 200 OK in 189ms (Views: 185.2ms | ActiveRecord: 0.5ms)
+
+
