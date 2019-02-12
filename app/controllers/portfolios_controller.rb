@@ -10,7 +10,7 @@ class PortfoliosController < ApplicationController
     params[:order].each do |key, value|
       portfolio.find(value[:id]).update(position: value[:position])
     end
-    render nothing: true 
+    render nothing: true
   end
   def angular
     @angular_portfolio_items = Portfolio.angular
