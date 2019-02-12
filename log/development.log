@@ -8077,3 +8077,18 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 189ms (Views: 185.2ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/portfolios" for 127.0.0.1 at 2019-02-12 13:14:45 +0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (1.6ms)
+  Rendered portfolios/index.html.erb within layouts/portfolio (21.7ms)
+  Rendered shared/_portfolio_nav.html.erb (1.4ms)
+  Rendered shared/_portfolio_masthead.html.erb (0.5ms)
+  Rendered shared/_portfolio_footer.html.erb (0.4ms)
+Completed 200 OK in 1751ms (Views: 1637.4ms | ActiveRecord: 54.1ms)
+
+
