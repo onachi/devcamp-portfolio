@@ -70,6 +70,7 @@ GEM
       sassc-rails (>= 2.0.0)
     builder (3.2.3)
     byebug (10.0.2)
+    cocoon (1.2.12)
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -248,6 +249,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.2.1)
   byebug
+  cocoon (~> 1.2, >= 1.2.12)
   coffee-rails (~> 4.2)
   devise (~> 4.2)
   figaro (~> 1.1, >= 1.1.1)

@@ -61,4 +61,5 @@ gem 'petergate', '~> 1.7'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'cocoon', '~> 1.2', '>= 1.2.12'
 
