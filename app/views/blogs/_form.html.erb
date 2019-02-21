@@ -4,15 +4,12 @@
       <%= alert_generator error %>
     <% end %>
   <% end %>
-
   <div class="form-group">
     <%= f.text_field :title, class: 'form-control', placeholder: "Title" %>
   </div>
-
   <div class="form-group">
     <%= f.text_area :body, class: 'form-control', rows: 15, placeholder: "Content" %>
   </div>
-
   <div class="form-group">
     <%= f.label :topic_id %>
     <%= f.collection_select(:topic_id, Topic.all, :id, :title,
@@ -25,6 +22,13 @@
     %>
   </div>
 
+  <div class="form-group">
+    <%= f.radio_button :status, 'draft' %>
+    <%= f.label :status, 'Draft' %>
+
+    <%= f.radio_button :status, 'published' %>
+    <%= f.label :status, 'Published' %>
+  </div>
 
   <div class="form-group">
     <%= f.submit "Submit", class: 'btn btn-primary' %>
