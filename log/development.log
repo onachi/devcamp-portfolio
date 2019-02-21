@@ -17102,3 +17102,257 @@ Processing by BlogsController#edit as HTML
 Completed 200 OK in 74ms (Views: 59.9ms | ActiveRecord: 7.7ms)
 
 
+Started GET "/blogs" for 127.0.0.1 at 2019-02-21 10:07:40 +0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:3
+  [1m[36mBlog Load (1.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:4
+  Rendered collection of blogs/_blog.html.erb [5 times] (7.9ms)
+  Rendered blogs/index.html.erb within layouts/blog (31.9ms)
+  Rendered shared/_blog_nav.html.erb (1.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  [1m[35mSQL (1.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE "blogs"."id" IS NOT NULL[0m
+  ↳ app/views/shared/_blog_sidebar.html.erb:9
+  Rendered shared/_blog_sidebar.html.erb (20.9ms)
+  Rendered shared/_blog_footer.html.erb (0.3ms)
+Completed 200 OK in 636ms (Views: 576.1ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/blogs/sdfgfdg" for 127.0.0.1 at 2019-02-21 10:07:42 +0700
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"sdfgfdg"}
+  [1m[36mBlog Load (2.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "sdfgfdg"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:83
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering blogs/show.html.erb within layouts/blog
+  Rendered blogs/show.html.erb within layouts/blog (0.9ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.4ms)
+  [1m[35mSQL (0.8ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE "blogs"."id" IS NOT NULL[0m
+  ↳ app/views/shared/_blog_sidebar.html.erb:9
+  Rendered shared/_blog_sidebar.html.erb (3.4ms)
+  Rendered shared/_blog_footer.html.erb (0.3ms)
+Completed 200 OK in 81ms (Views: 69.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/blogs/sdfgfdg" for 127.0.0.1 at 2019-02-21 10:10:04 +0700
+  
+SyntaxError (/Users/onachi/DevcampPortfolio/app/helpers/blogs_helper.rb:24: syntax error, unexpected end, expecting end-of-input):
+  
+app/helpers/blogs_helper.rb:24: syntax error, unexpected end, expecting end-of-input
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/blogs_controller.rb:1:in `<main>'
+Started GET "/blogs/sdfgfdg" for 127.0.0.1 at 2019-02-21 10:10:12 +0700
+  
+ActionController::RoutingError (Couldn't find BlogsHelper, expected it to be defined in helpers/blogs_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/blogs_controller.rb:1:in `<main>'
+Started GET "/blogs/sdfgfdg" for 127.0.0.1 at 2019-02-21 10:10:14 +0700
+  
+ActionController::RoutingError (Couldn't find BlogsHelper, expected it to be defined in helpers/blogs_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/blogs_controller.rb:1:in `<main>'
+Started GET "/blogs/sdfgfdg" for 127.0.0.1 at 2019-02-21 10:10:14 +0700
+  
+ActionController::RoutingError (Couldn't find BlogsHelper, expected it to be defined in helpers/blogs_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/blogs_controller.rb:1:in `<main>'
+Started GET "/blogs/sdfgfdg" for 127.0.0.1 at 2019-02-21 10:11:26 +0700
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"sdfgfdg"}
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "sdfgfdg"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:83
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering blogs/show.html.erb within layouts/blog
+  Rendered blogs/show.html.erb within layouts/blog (0.6ms)
+  Rendered shared/_blog_nav.html.erb (2.6ms)
+  Rendered shared/_blog_masthead.html.erb (0.9ms)
+  [1m[35mSQL (1.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE "blogs"."id" IS NOT NULL[0m
+  ↳ app/views/shared/_blog_sidebar.html.erb:9
+  Rendered shared/_blog_sidebar.html.erb (9.7ms)
+  Rendered shared/_blog_footer.html.erb (0.3ms)
+Completed 200 OK in 136ms (Views: 90.6ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2019-02-21 10:21:35 +0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:3
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:4
+  Rendered collection of blogs/_blog.html.erb [5 times] (3.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (22.3ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (1.1ms)
+  [1m[35mSQL (1.3ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE "blogs"."id" IS NOT NULL[0m
+  ↳ app/views/shared/_blog_sidebar.html.erb:9
+  Rendered shared/_blog_sidebar.html.erb (3.6ms)
+  Rendered shared/_blog_footer.html.erb (0.3ms)
+Completed 200 OK in 107ms (Views: 87.3ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/blogs/my-blog-post-9" for 127.0.0.1 at 2019-02-21 10:21:36 +0700
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-9"}
+  [1m[36mBlog Load (4.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-9"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:83
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering blogs/show.html.erb within layouts/blog
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/blogs/show.html.erb:6
+  Rendered blogs/show.html.erb within layouts/blog (17.8ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 9.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial comments/_comment_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/onachi/DevcampPortfolio/app/views"
+  * "/Users/onachi/.rvm/gems/ruby-2.6.0/gems/kaminari-core-1.1.1/app/views"
+  * "/Users/onachi/.rvm/gems/ruby-2.6.0/gems/devise-4.5.0/app/views"
+):
+    12:     <%= markdown @blog.body %>
+    13:   </p>
+    14: 
+    15:   <%= render 'comments/comment_form' %>
+    16: 
+    17:   <div id="comments" data-blog-id="<%= @blog.id %>">
+    18:     <%= render @blog.comments %>
+  
+app/views/blogs/show.html.erb:15:in `_app_views_blogs_show_html_erb__2008767028127776015_70312507671480'
+Started POST "/__web_console/repl_sessions/79baf1059b32237392467f0fdcda514d/trace" for 127.0.0.1 at 2019-02-21 10:21:40 +0700
+Started GET "/blogs" for 127.0.0.1 at 2019-02-21 10:21:59 +0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:3
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:4
+  Rendered collection of blogs/_blog.html.erb [5 times] (2.1ms)
+  Rendered blogs/index.html.erb within layouts/blog (15.1ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.4ms)
+  [1m[35mSQL (0.7ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE "blogs"."id" IS NOT NULL[0m
+  ↳ app/views/shared/_blog_sidebar.html.erb:9
+  Rendered shared/_blog_sidebar.html.erb (2.8ms)
+  Rendered shared/_blog_footer.html.erb (0.2ms)
+Completed 200 OK in 108ms (Views: 97.1ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/blogs/my-blog-post-9" for 127.0.0.1 at 2019-02-21 10:22:00 +0700
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-9"}
+  [1m[36mBlog Load (12.9ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-9"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:83
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering blogs/show.html.erb within layouts/blog
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/blogs/show.html.erb:6
+  Rendered blogs/show.html.erb within layouts/blog (9.7ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 13.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for #<Blog:0x00007fe5c863ca80>
+Did you mean?  committed!):
+    15:   
+    16: 
+    17:   <div id="comments" data-blog-id="<%= @blog.id %>">
+    18:     <%= render @blog.comments %>
+    19:   </div>
+    20: </div>
+  
+app/views/blogs/show.html.erb:18:in `_app_views_blogs_show_html_erb__2008767028127776015_70312443143000'
+Started GET "/blogs/my-blog-post-9" for 127.0.0.1 at 2019-02-21 10:22:38 +0700
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-9"}
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-9"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:83
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering blogs/show.html.erb within layouts/blog
+  Rendered blogs/show.html.erb within layouts/blog (0.7ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.4ms)
+  [1m[35mSQL (0.6ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE "blogs"."id" IS NOT NULL[0m
+  ↳ app/views/shared/_blog_sidebar.html.erb:9
+  Rendered shared/_blog_sidebar.html.erb (2.6ms)
+  Rendered shared/_blog_footer.html.erb (0.3ms)
+Completed 200 OK in 64ms (Views: 59.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/blogs/my-blog-post-9/edit" for 127.0.0.1 at 2019-02-21 10:22:40 +0700
+Processing by BlogsController#edit as HTML
+  Parameters: {"id"=>"my-blog-post-9"}
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-9"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:83
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering blogs/edit.html.erb within layouts/blog
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/blogs/_form.html.erb:17
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  ↳ app/views/blogs/_form.html.erb:15
+  Rendered blogs/_form.html.erb (103.3ms)
+  Rendered blogs/edit.html.erb within layouts/blog (105.3ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  [1m[35mSQL (0.7ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE "blogs"."id" IS NOT NULL[0m
+  ↳ app/views/shared/_blog_sidebar.html.erb:9
+  Rendered shared/_blog_sidebar.html.erb (2.8ms)
+  Rendered shared/_blog_footer.html.erb (0.2ms)
+Completed 200 OK in 166ms (Views: 155.7ms | ActiveRecord: 4.0ms)
+
+
+Started PATCH "/blogs/my-blog-post-9" for 127.0.0.1 at 2019-02-21 10:24:17 +0700
+Processing by BlogsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Be72SM9wVHX9jjvifTW7zjGw0SZct2cLL2ZuUyeja5DyARI33eWZrRSK8rZrDXLYUaiOhLiGBJHl0RwGv9sffg==", "blog"=>{"title"=>"My Blog Post 9", "body"=>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\r\n\r\n\r\n```ruby\r\ndef my_great_method\r\n  puts \"here it is\"\r\nend\r\n```\r\n\r\n```javascript\r\nalert('Hi there');\r\n```", "topic_id"=>"2", "status"=>"published"}, "commit"=>"Submit", "id"=>"my-blog-post-9"}
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-9"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:83
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:52
+  [1m[36mBlog Update (1.3ms)[0m  [1m[33mUPDATE "blogs" SET "body" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\r\n\r\n\r\n```ruby\r\ndef my_great_method\r\n  puts \"here it is\"\r\nend\r\n```\r\n\r\n```javascript\r\nalert('Hi there');\r\n```"], ["updated_at", "2019-02-21 03:24:17.613840"], ["id", 10]]
+  ↳ app/controllers/blogs_controller.rb:52
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:52
+Redirected to http://0.0.0.0:3000/blogs/my-blog-post-9
+Completed 302 Found in 18ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/blogs/my-blog-post-9" for 127.0.0.1 at 2019-02-21 10:24:17 +0700
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-9"}
+  [1m[36mBlog Load (1.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-9"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:83
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering blogs/show.html.erb within layouts/blog
+  Rendered blogs/show.html.erb within layouts/blog (54.4ms)
+  Rendered shared/_blog_nav.html.erb (0.6ms)
+  Rendered shared/_blog_masthead.html.erb (0.7ms)
+  [1m[35mSQL (0.7ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE "blogs"."id" IS NOT NULL[0m
+  ↳ app/views/shared/_blog_sidebar.html.erb:9
+  Rendered shared/_blog_sidebar.html.erb (2.8ms)
+  Rendered shared/_blog_footer.html.erb (0.3ms)
+Completed 200 OK in 132ms (Views: 125.5ms | ActiveRecord: 2.4ms)
+
+
