@@ -19923,3 +19923,206 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/blogs" for 127.0.0.1 at 2019-02-25 09:44:09 +0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/onachi/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:3
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:4
+  Rendered blogs/_admin_actions.html.erb (0.8ms)
+  Rendered blogs/_admin_actions.html.erb (0.3ms)
+  Rendered blogs/_admin_actions.html.erb (0.3ms)
+  Rendered blogs/_admin_actions.html.erb (0.6ms)
+  Rendered blogs/_admin_actions.html.erb (0.3ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (14.1ms)
+  Rendered blogs/index.html.erb within layouts/blog (40.6ms)
+  Rendered shared/_blog_nav.html.erb (1.9ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  [1m[35mSQL (1.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE "blogs"."id" IS NOT NULL[0m
+  ↳ app/views/shared/_blog_sidebar.html.erb:11
+  Rendered shared/_blog_sidebar.html.erb (23.6ms)
+  Rendered shared/_blog_footer.html.erb (0.3ms)
+Completed 200 OK in 3180ms (Views: 3120.4ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/images/home_bg.png" for 127.0.0.1 at 2019-02-25 09:44:12 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/home_bg.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/blogs" for 127.0.0.1 at 2019-02-25 09:44:12 +0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (15.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:3
+  [1m[36mBlog Load (1.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:4
+  Rendered blogs/_admin_actions.html.erb (0.7ms)
+  Rendered blogs/_admin_actions.html.erb (0.9ms)
+  Rendered blogs/_admin_actions.html.erb (0.8ms)
+  Rendered blogs/_admin_actions.html.erb (0.6ms)
+  Rendered blogs/_admin_actions.html.erb (0.3ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (11.2ms)
+  Rendered blogs/index.html.erb within layouts/blog (65.2ms)
+  Rendered shared/_blog_nav.html.erb (0.7ms)
+  Rendered shared/_blog_masthead.html.erb (0.8ms)
+  [1m[35mSQL (1.8ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE "blogs"."id" IS NOT NULL[0m
+  ↳ app/views/shared/_blog_sidebar.html.erb:11
+  Rendered shared/_blog_sidebar.html.erb (6.1ms)
+  Rendered shared/_blog_footer.html.erb (0.4ms)
+Completed 200 OK in 237ms (Views: 183.2ms | ActiveRecord: 42.2ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2019-02-25 09:44:17 +0700
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (1.7ms)
+  Rendered portfolios/index.html.erb within layouts/portfolio (25.1ms)
+  Rendered shared/_portfolio_nav.html.erb (1.0ms)
+  Rendered shared/_portfolio_footer.html.erb (0.7ms)
+Completed 200 OK in 106ms (Views: 77.4ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2019-02-25 09:44:17 +0700
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (1.4ms)
+  Rendered portfolios/index.html.erb within layouts/portfolio (3.4ms)
+  Rendered shared/_portfolio_nav.html.erb (0.5ms)
+  Rendered shared/_portfolio_footer.html.erb (0.3ms)
+Completed 200 OK in 100ms (Views: 96.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-25 09:44:29 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+DEPRECATION WARNING: The asset "home_bg.png" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_layouts_application_html_erb___2939297410067150238_70242893635860 at /Users/onachi/DevcampPortfolio/app/views/layouts/application.html.erb:21)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendered shared/_application_nav.html.erb (2.3ms)
+Completed 200 OK in 82ms (Views: 74.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/home_bg.png" for 127.0.0.1 at 2019-02-25 09:44:29 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/home_bg.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-02-25 09:44:29 +0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+DEPRECATION WARNING: The asset "home_bg.png" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_layouts_application_html_erb___2939297410067150238_70242928523280 at /Users/onachi/DevcampPortfolio/app/views/layouts/application.html.erb:21)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5
+  Rendered shared/_application_nav.html.erb (2.2ms)
+Completed 200 OK in 154ms (Views: 150.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/home_bg.png" for 127.0.0.1 at 2019-02-25 09:44:29 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/home_bg.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
